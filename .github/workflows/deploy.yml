@@ -1,0 +1,15 @@
+ # Job: Deploy
+deploy:
+  runs-on: ubuntu-latest
+# Steps for the deploy job
+  steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+    
+    - name : deploy page
+      uses: actions/deploy-pages@v3
+      with: ${{ github.token }}
+
+    - name: Deploy to production
+
+run: echo "Deploying to production..."
